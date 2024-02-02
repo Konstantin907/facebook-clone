@@ -2,8 +2,11 @@ import "./sidebar.css"
 import {RssFeed,Chat, VideoCall, Group,
   Bookmark, QuestionMark,  WorkOutline,
   Event,
-  School, 
+  School,
+  Close, 
 } from "@mui/icons-material"
+import { Users } from "../../dummyData"
+import { CloseFriends } from '../closeFriends/CloseFriends';
 
 export const Sidebar = () => {
   return (
@@ -53,30 +56,11 @@ export const Sidebar = () => {
         {/* friends */}
 
         <ul className="sidebarFriendLIst">
-          <li className="sidebarFriend">
-            <img className="sidebarFriendImage" src="/assets/10.jpeg" alt="" />
-            <span className="sidebarFriendName">Jane Raven</span>
-          </li>
-
-          <li className="sidebarFriend">
-            <img className="sidebarFriendImage" src="/assets/10.jpeg" alt="" />
-            <span className="sidebarFriendName">Jane Raven</span>
-          </li>
-
-          <li className="sidebarFriend">
-            <img className="sidebarFriendImage" src="/assets/10.jpeg" alt="" />
-            <span className="sidebarFriendName">Jane Raven</span>
-          </li>
-
-          <li className="sidebarFriend">
-            <img className="sidebarFriendImage" src="/assets/10.jpeg" alt="" />
-            <span className="sidebarFriendName">Jane Raven</span>
-          </li>
-
-          <li className="sidebarFriend">
-            <img className="sidebarFriendImage" src="/assets/10.jpeg" alt="" />
-            <span className="sidebarFriendName">Jane Raven</span>
-          </li>
+         
+        {Users.map((u) => (
+            <CloseFriends key={u.id} user={u} />
+          ))}
+         
         </ul>
         </div>
     </div>
