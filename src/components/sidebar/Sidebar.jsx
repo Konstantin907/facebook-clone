@@ -3,7 +3,6 @@ import {RssFeed,Chat, VideoCall, Group,
   Bookmark, QuestionMark,  WorkOutline,
   Event,
   School,
-  Close, 
 } from "@mui/icons-material"
 import { Users } from "../../dummyData"
 import { CloseFriends } from '../closeFriends/CloseFriends';
